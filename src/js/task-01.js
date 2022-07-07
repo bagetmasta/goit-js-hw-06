@@ -1,10 +1,16 @@
-const itemEl = document.querySelector('.item h2');
-// console.log(itemEl);
+const allCategoriesRef = document.querySelectorAll('.item');
+console.log(`Number of categories:`, allCategoriesRef.length);
 
-const testText = itemEl.textContent;
-// console.log(testText);
+const categoriesListRef = document.querySelector('#categories');
 
-// console.log(itemEl.parentNode);
+const firstItemRef = categoriesListRef.firstElementChild;
+console.log(`Category:`, firstItemRef.firstElementChild.textContent);
+console.log(`Elements:`, firstItemRef.lastElementChild.children.length);
 
-const titleEl = document.querySelector('h2');
-console.log(titleEl.parentNode);
+const secondItemRef = firstItemRef.nextElementSibling;
+console.log(`Category:`, secondItemRef.firstElementChild.textContent);
+console.log(`Elements:`, secondItemRef.lastElementChild.children.length);
+
+const thirdItemRef = secondItemRef.nextElementSibling;
+console.log(`Category:`, thirdItemRef.firstElementChild.textContent);
+console.log(`Elements:`, thirdItemRef.lastElementChild.children.length);
