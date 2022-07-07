@@ -16,5 +16,6 @@ function handleSubmit(event) {
     newObject.password = password.value;
 
     console.log(newObject);
+    event.currentTarget.reset();
   }
 }
