@@ -1,7 +1,9 @@
 const inputRef = document.querySelector('#validation-input');
 
 inputRef.addEventListener('blur', event => {
-  if (event.currentTarget.value.length !== 6) {
+  const maxSymbols = Number(inputRef.dataset.length);
+
+  if (event.currentTarget.value.length !== maxSymbols) {
     inputRef.classList.remove('valid');
     inputRef.classList.add('invalid');
   } else {
